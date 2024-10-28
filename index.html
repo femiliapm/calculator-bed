@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Calculator BED</title>
+</head>
+
+<body>
+  <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    <!-- Navbar content -->
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Calculator BED</a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div> -->
+    </div>
+  </nav>
+
+  <section class="container mt-3">
+    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-bed1-tab" data-bs-toggle="pill" data-bs-target="#pills-bed1" type="button" role="tab" aria-controls="pills-bed1" aria-selected="true">BED 1</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-bed2-tab" data-bs-toggle="pill" data-bs-target="#pills-bed2" type="button" role="tab" aria-controls="pills-bed2" aria-selected="false">BED 2</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-bed3-tab" data-bs-toggle="pill" data-bs-target="#pills-bed3" type="button" role="tab" aria-controls="pills-bed3" aria-selected="false">BED 3</button>
+      </li>
+    </ul>
+
+    <hr>
+
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-bed1" role="tabpanel" aria-labelledby="pills-bed1-tab" tabindex="0">
+        <span class="fs-3 fw-bold">BED 1</span>
+
+        <div class="row mt-2">
+          <div class="col input-group">
+            <span class="input-group-text">BED</span>
+            <input type="number" class="form-control" placeholder="0" id="bed-1">
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col input-group">
+            <span class="input-group-text">n</span>
+            <input type="number" class="form-control" placeholder="0" id="n-1">
+          </div>
+          <div class="col input-group">
+            <span class="input-group-text">K</span>
+            <input type="number" class="form-control" placeholder="0" id="k-1">
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col input-group">
+            <span class="input-group-text">d</span>
+            <input type="number" class="form-control" placeholder="0" id="d-1">
+          </div>
+          <div class="col input-group">
+            <span class="input-group-text">T</span>
+            <input type="number" class="form-control" placeholder="0" id="t-1">
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col input-group">
+            <span class="input-group-text">&alpha;/&beta;<sup class="text-danger fw-bold">*</sup></span>
+            <input type="number" class="form-control" placeholder="3" id="ab-1">
+          </div>
+          <div class="col input-group">
+            <span class="input-group-text">T<sub>k</sub></span>
+            <input type="number" class="form-control" placeholder="0" id="tk-1">
+          </div>
+        </div>
+
+        <p class="mt-2" style="font-size: 10px;"><span class="text-danger fw-bold">*</span>Usually 3 for normal tissue and 10 for tumour</p>
+        <p style="font-size: 10px;"><span class="text-danger fw-bold">notes</span> Please empty the input you want to calculate!</p>
+
+        <div class="my-2 d-flex justify-content-around">
+          <button class="btn btn-danger">Reset</button>
+          <button class="btn btn-success" id="calc-1">Calculate</button>
+        </div>
+
+        <hr>
+
+        <!-- <div class="mt-2">
+          <span class="fs-3">Result: <span class="fs-5">BED 1</span></span>
+          <p>BED = <span>12090</span></p>
+          <p>n = <span>12090</span></p>
+          <p>K = <span>12090</span></p>
+          <p>d = <span>12090</span></p>
+          <p>T = <span>12090</span></p>
+          <p>&alpha;/&beta; = <span>12090</span></p>
+          <p>T<sub>k</sub> = <span>12090</span></p>
+        </div> -->
+      </div>
+
+      <div class="tab-pane fade" id="pills-bed2" role="tabpanel" aria-labelledby="pills-bed2-tab" tabindex="0">
+        <span class="fs-3 fw-bold">BED 2</span>
+
+        <div class="row mt-2">
+          <div class="col input-group">
+            <span class="input-group-text">BED</span>
+            <input type="number" class="form-control" placeholder="0" id="bed-2">
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col input-group">
+            <span class="input-group-text">n</span>
+            <input type="number" class="form-control" placeholder="0" id="n-2">
+          </div>
+          <div class="col input-group">
+            <span class="input-group-text">K</span>
+            <input type="number" class="form-control" placeholder="0" id="k-2">
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col input-group">
+            <span class="input-group-text">d</span>
+            <input type="number" class="form-control" placeholder="0" id="d-2">
+          </div>
+          <div class="col input-group">
+            <span class="input-group-text">T</span>
+            <input type="number" class="form-control" placeholder="0" id="t-2">
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col input-group">
+            <span class="input-group-text">&alpha;/&beta;<sup class="text-danger fw-bold">*</sup></span>
+            <input type="number" class="form-control" placeholder="3" id="ab-2">
+          </div>
+          <div class="col input-group">
+            <span class="input-group-text">T<sub>k</sub></span>
+            <input type="number" class="form-control" placeholder="0" id="tk-2">
+          </div>
+        </div>
+
+        <p class="mt-2" style="font-size: 10px;"><span class="text-danger fw-bold">*</span>Usually 3 for normal tissue and 10 for tumour</p>
+        <p style="font-size: 10px;"><span class="text-danger fw-bold">notes</span> Please empty the input you want to calculate!</p>
+
+        <div class="my-2 d-flex justify-content-around">
+          <button class="btn btn-danger">Reset</button>
+          <button class="btn btn-success" id="calc-2">Calculate</button>
+        </div>
+
+        <hr>
+      </div>
+
+      <div class="tab-pane fade" id="pills-bed3" role="tabpanel" aria-labelledby="pills-bed3-tab" tabindex="0">
+        <span class="fs-3 fw-bold">BED 3</span>
+
+        <div class="row mt-2">
+          <div class="col input-group">
+            <span class="input-group-text">BED</span>
+            <input type="number" class="form-control" placeholder="0" id="bed-3">
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col input-group">
+            <span class="input-group-text">n</span>
+            <input type="number" class="form-control" placeholder="0" id="n-3">
+          </div>
+          <div class="col input-group">
+            <span class="input-group-text">K</span>
+            <input type="number" class="form-control" placeholder="0" id="k-3">
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col input-group">
+            <span class="input-group-text">d</span>
+            <input type="number" class="form-control" placeholder="0" id="d-3">
+          </div>
+          <div class="col input-group">
+            <span class="input-group-text">T</span>
+            <input type="number" class="form-control" placeholder="0" id="t-3">
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col input-group">
+            <span class="input-group-text">&alpha;/&beta;<sup class="text-danger fw-bold">*</sup></span>
+            <input type="number" class="form-control" placeholder="3" id="ab-3">
+          </div>
+          <div class="col input-group">
+            <span class="input-group-text">T<sub>k</sub></span>
+            <input type="number" class="form-control" placeholder="0" id="tk-3">
+          </div>
+        </div>
+
+        <p class="mt-2" style="font-size: 10px;"><span class="text-danger fw-bold">*</span>Usually 3 for normal tissue and 10 for tumour</p>
+        <p style="font-size: 10px;"><span class="text-danger fw-bold">notes</span> Please empty the input you want to calculate!</p>
+
+        <div class="my-2 d-flex justify-content-around">
+          <button class="btn btn-danger">Reset</button>
+          <button class="btn btn-success" id="calc-3">Calculate</button>
+        </div>
+
+        <hr>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+<script src="./js/script.js"></script>
+
+</html>
