@@ -75,49 +75,51 @@
       <div class="tab-pane fade show active" id="pills-bed1" role="tabpanel" aria-labelledby="pills-bed1-tab" tabindex="0">
         <span class="fs-3 fw-bold">BED 1</span>
 
-        <div class="row mt-2">
-          <div class="col input-group">
-            <span class="input-group-text">BED</span>
-            <input type="number" class="form-control" placeholder="0" id="bed-1">
+        <form id="form-1">
+          <div class="row mt-2">
+            <div class="col input-group">
+              <span class="input-group-text">BED</span>
+              <input type="number" class="form-control" placeholder="0" name="bed" id="bed-1">
+            </div>
           </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col input-group">
-            <span class="input-group-text">n</span>
-            <input type="number" class="form-control" placeholder="0" id="n-1">
+          <div class="row mt-2">
+            <div class="col input-group">
+              <span class="input-group-text">n</span>
+              <input type="number" class="form-control" placeholder="0" name="n" id="n-1">
+            </div>
+            <div class="col input-group">
+              <span class="input-group-text">K</span>
+              <input type="number" class="form-control" placeholder="0" name="k" id="k-1">
+            </div>
           </div>
-          <div class="col input-group">
-            <span class="input-group-text">K</span>
-            <input type="number" class="form-control" placeholder="0" id="k-1">
+          <div class="row mt-2">
+            <div class="col input-group">
+              <span class="input-group-text">d</span>
+              <input type="number" class="form-control" placeholder="0" name="d" id="d-1">
+            </div>
+            <div class="col input-group">
+              <span class="input-group-text">T</span>
+              <input type="number" class="form-control" placeholder="0" name="t" id="t-1">
+            </div>
           </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col input-group">
-            <span class="input-group-text">d</span>
-            <input type="number" class="form-control" placeholder="0" id="d-1">
+          <div class="row mt-2">
+            <div class="col input-group">
+              <span class="input-group-text">&alpha;/&beta;<sup class="text-danger fw-bold">*</sup></span>
+              <input type="number" class="form-control" placeholder="3" name="ab" id="ab-1">
+            </div>
+            <div class="col input-group">
+              <span class="input-group-text">T<sub>k</sub></span>
+              <input type="number" class="form-control" placeholder="0" name="tk" id="tk-1">
+            </div>
           </div>
-          <div class="col input-group">
-            <span class="input-group-text">T</span>
-            <input type="number" class="form-control" placeholder="0" id="t-1">
-          </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col input-group">
-            <span class="input-group-text">&alpha;/&beta;<sup class="text-danger fw-bold">*</sup></span>
-            <input type="number" class="form-control" placeholder="3" id="ab-1">
-          </div>
-          <div class="col input-group">
-            <span class="input-group-text">T<sub>k</sub></span>
-            <input type="number" class="form-control" placeholder="0" id="tk-1">
-          </div>
-        </div>
+        </form>
 
         <p class="mt-2" style="font-size: 10px;"><span class="text-danger fw-bold">*</span>Usually 3 for normal tissue and 10 for tumour</p>
         <p style="font-size: 10px;"><span class="text-danger fw-bold">notes</span> Please empty the input you want to calculate!</p>
 
         <div class="my-2 d-flex justify-content-around">
-          <button class="btn btn-danger">Reset</button>
-          <button class="btn btn-success" id="calc-1">Calculate</button>
+          <button class="btn btn-danger" data-id="1">Reset</button>
+          <button class="btn btn-success" id="calc-1" data-id="1">Calculate</button>
         </div>
 
         <hr>
@@ -137,49 +139,51 @@
       <div class="tab-pane fade" id="pills-bed2" role="tabpanel" aria-labelledby="pills-bed2-tab" tabindex="0">
         <span class="fs-3 fw-bold">BED 2</span>
 
-        <div class="row mt-2">
-          <div class="col input-group">
-            <span class="input-group-text">BED</span>
-            <input type="number" class="form-control" placeholder="0" id="bed-2">
+        <form action="" id="form-2">
+          <div class="row mt-2">
+            <div class="col input-group">
+              <span class="input-group-text">BED</span>
+              <input type="number" class="form-control" placeholder="0" id="bed-2" name="bed">
+            </div>
           </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col input-group">
-            <span class="input-group-text">n</span>
-            <input type="number" class="form-control" placeholder="0" id="n-2">
+          <div class="row mt-2">
+            <div class="col input-group">
+              <span class="input-group-text">n</span>
+              <input type="number" class="form-control" placeholder="0" id="n-2" name="n">
+            </div>
+            <div class="col input-group">
+              <span class="input-group-text">K</span>
+              <input type="number" class="form-control" placeholder="0" id="k-2" name="k">
+            </div>
           </div>
-          <div class="col input-group">
-            <span class="input-group-text">K</span>
-            <input type="number" class="form-control" placeholder="0" id="k-2">
+          <div class="row mt-2">
+            <div class="col input-group">
+              <span class="input-group-text">d</span>
+              <input type="number" class="form-control" placeholder="0" id="d-2" name="d">
+            </div>
+            <div class="col input-group">
+              <span class="input-group-text">T</span>
+              <input type="number" class="form-control" placeholder="0" id="t-2" name="t">
+            </div>
           </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col input-group">
-            <span class="input-group-text">d</span>
-            <input type="number" class="form-control" placeholder="0" id="d-2">
+          <div class="row mt-2">
+            <div class="col input-group">
+              <span class="input-group-text">&alpha;/&beta;<sup class="text-danger fw-bold">*</sup></span>
+              <input type="number" class="form-control" placeholder="3" id="ab-2" name="ab">
+            </div>
+            <div class="col input-group">
+              <span class="input-group-text">T<sub>k</sub></span>
+              <input type="number" class="form-control" placeholder="0" id="tk-2" name="tk">
+            </div>
           </div>
-          <div class="col input-group">
-            <span class="input-group-text">T</span>
-            <input type="number" class="form-control" placeholder="0" id="t-2">
-          </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col input-group">
-            <span class="input-group-text">&alpha;/&beta;<sup class="text-danger fw-bold">*</sup></span>
-            <input type="number" class="form-control" placeholder="3" id="ab-2">
-          </div>
-          <div class="col input-group">
-            <span class="input-group-text">T<sub>k</sub></span>
-            <input type="number" class="form-control" placeholder="0" id="tk-2">
-          </div>
-        </div>
+        </form>
 
         <p class="mt-2" style="font-size: 10px;"><span class="text-danger fw-bold">*</span>Usually 3 for normal tissue and 10 for tumour</p>
         <p style="font-size: 10px;"><span class="text-danger fw-bold">notes</span> Please empty the input you want to calculate!</p>
 
         <div class="my-2 d-flex justify-content-around">
-          <button class="btn btn-danger">Reset</button>
-          <button class="btn btn-success" id="calc-2">Calculate</button>
+          <button class="btn btn-danger" data-id="2">Reset</button>
+          <button class="btn btn-success" id="calc-2" data-id="2">Calculate</button>
         </div>
 
         <hr>
@@ -188,49 +192,51 @@
       <div class="tab-pane fade" id="pills-bed3" role="tabpanel" aria-labelledby="pills-bed3-tab" tabindex="0">
         <span class="fs-3 fw-bold">BED 3</span>
 
-        <div class="row mt-2">
-          <div class="col input-group">
-            <span class="input-group-text">BED</span>
-            <input type="number" class="form-control" placeholder="0" id="bed-3">
+        <form action="" id="form-3">
+          <div class="row mt-2">
+            <div class="col input-group">
+              <span class="input-group-text">BED</span>
+              <input type="number" class="form-control" placeholder="0" id="bed-3" name="bed">
+            </div>
           </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col input-group">
-            <span class="input-group-text">n</span>
-            <input type="number" class="form-control" placeholder="0" id="n-3">
+          <div class="row mt-2">
+            <div class="col input-group">
+              <span class="input-group-text">n</span>
+              <input type="number" class="form-control" placeholder="0" id="n-3" name="n">
+            </div>
+            <div class="col input-group">
+              <span class="input-group-text">K</span>
+              <input type="number" class="form-control" placeholder="0" id="k-3" name="k">
+            </div>
           </div>
-          <div class="col input-group">
-            <span class="input-group-text">K</span>
-            <input type="number" class="form-control" placeholder="0" id="k-3">
+          <div class="row mt-2">
+            <div class="col input-group">
+              <span class="input-group-text">d</span>
+              <input type="number" class="form-control" placeholder="0" id="d-3" name="d">
+            </div>
+            <div class="col input-group">
+              <span class="input-group-text">T</span>
+              <input type="number" class="form-control" placeholder="0" id="t-3" name="t">
+            </div>
           </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col input-group">
-            <span class="input-group-text">d</span>
-            <input type="number" class="form-control" placeholder="0" id="d-3">
+          <div class="row mt-2">
+            <div class="col input-group">
+              <span class="input-group-text">&alpha;/&beta;<sup class="text-danger fw-bold">*</sup></span>
+              <input type="number" class="form-control" placeholder="3" id="ab-3" name="ab">
+            </div>
+            <div class="col input-group">
+              <span class="input-group-text">T<sub>k</sub></span>
+              <input type="number" class="form-control" placeholder="0" id="tk-3" name="tk">
+            </div>
           </div>
-          <div class="col input-group">
-            <span class="input-group-text">T</span>
-            <input type="number" class="form-control" placeholder="0" id="t-3">
-          </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col input-group">
-            <span class="input-group-text">&alpha;/&beta;<sup class="text-danger fw-bold">*</sup></span>
-            <input type="number" class="form-control" placeholder="3" id="ab-3">
-          </div>
-          <div class="col input-group">
-            <span class="input-group-text">T<sub>k</sub></span>
-            <input type="number" class="form-control" placeholder="0" id="tk-3">
-          </div>
-        </div>
+        </form>
 
         <p class="mt-2" style="font-size: 10px;"><span class="text-danger fw-bold">*</span>Usually 3 for normal tissue and 10 for tumour</p>
         <p style="font-size: 10px;"><span class="text-danger fw-bold">notes</span> Please empty the input you want to calculate!</p>
 
         <div class="my-2 d-flex justify-content-around">
-          <button class="btn btn-danger">Reset</button>
-          <button class="btn btn-success" id="calc-3">Calculate</button>
+          <button class="btn btn-danger" data-id="3">Reset</button>
+          <button class="btn btn-success" id="calc-3" data-id="3">Calculate</button>
         </div>
 
         <hr>
