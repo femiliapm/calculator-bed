@@ -104,7 +104,10 @@
           </div>
           <div class="row mt-2">
             <div class="col input-group">
-              <span class="input-group-text">&alpha;/&beta;<sup class="text-danger fw-bold">*</sup></span>
+              <span class="input-group-text">
+                &alpha;/&beta;<sup class="text-danger fw-bold">*</sup>
+                <sup class="btn-info" data-bs-toggle="modal" data-bs-target="#miscModal">&#9432;</sup>
+              </span>
               <input type="number" class="form-control" placeholder="3" name="ab" id="ab-1" value="10">
             </div>
             <div class="col input-group">
@@ -279,13 +282,62 @@
         <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
         <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li> -->
       </ul>
-      <p class="text-center text-body-secondary small">© 2025 Developed by Femilia Putri Mayranti | Contributions by Brigitha Dwinesti, Medical Physicist</p>
+      <p class="text-center text-body-secondary small">&copy; 2025 Developed by Femilia Putri Mayranti | Contributions by Brigitha Dwinesti, Medical Physicist</p>
 
     </footer>
   </div>
 
+  <!-- Modal -->
+  <div class="modal fade" id="miscModal" tabindex="-1" aria-labelledby="miscModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="miscModalLabel">Recommended Radiobiological Parameters per Tumour Site</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table small">
+            <thead>
+              <tr>
+                <th class="text-center">Tumour and Clinical Setting</th>
+                <th class="text-center">
+                  SLRON <br>
+                  Tumour Classification
+                </th>
+                <th class="text-center">
+                  &alpha;/&beta; Ratio <br>
+                  (Gy)
+                </th>
+                <th class="text-center">
+                  K-value <br>
+                  (Gy per day)
+                </th>
+                <th class="text-center">T<sub>k</sub></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Squamous cell carcinomas (NSCLC) including adenocarcinomas in lung</td>
+                <td></td>
+                <td>10</td>
+                <td>0.9</td>
+                <td>28</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
 </body>
 
+<script src="./js/script-dom.js"></script>
 <script src="./js/script.js"></script>
 
 </html>
