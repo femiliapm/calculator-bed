@@ -3,3 +3,7 @@ th {
   text-align: center;
   vertical-align: middle;
 }
+
+.btn-info {
+  cursor: pointer;
+}
