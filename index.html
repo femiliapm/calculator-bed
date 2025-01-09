@@ -59,7 +59,8 @@
   <section class="container mt-3">
     <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="pills-bed1-tab" data-bs-toggle="pill" data-bs-target="#pills-bed1" type="button" role="tab" aria-controls="pills-bed1" aria-selected="true">BED 1</button>
+        <!-- <button class="nav-link active" id="pills-bed1-tab" data-bs-toggle="pill" data-bs-target="#pills-bed1" type="button" role="tab" aria-controls="pills-bed1" aria-selected="true">BED 1</button> -->
+        <button class="nav-link" id="pills-bed1-tab" data-bs-toggle="pill" data-bs-target="#pills-bed1" type="button" role="tab" aria-controls="pills-bed1" aria-selected="true">BED 1</button>
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="pills-bed2-tab" data-bs-toggle="pill" data-bs-target="#pills-bed2" type="button" role="tab" aria-controls="pills-bed2" aria-selected="false">BED 2</button>
@@ -68,14 +69,15 @@
         <button class="nav-link" id="pills-bed3-tab" data-bs-toggle="pill" data-bs-target="#pills-bed3" type="button" role="tab" aria-controls="pills-bed3" aria-selected="false">BED 3</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-treat-gap-tab" data-bs-toggle="pill" data-bs-target="#pills-treat-gap" type="button" role="tab" aria-controls="pills-treat-gap" aria-selected="false">Treatment Gap Compensation</button>
+        <button class="nav-link active" id="pills-treat-gap-tab" data-bs-toggle="pill" data-bs-target="#pills-treat-gap" type="button" role="tab" aria-controls="pills-treat-gap" aria-selected="false">Treatment Gap Compensation</button>
       </li>
     </ul>
 
     <hr>
 
     <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-bed1" role="tabpanel" aria-labelledby="pills-bed1-tab" tabindex="0">
+      <!-- <div class="tab-pane fade show active" id="pills-bed1" role="tabpanel" aria-labelledby="pills-bed1-tab" tabindex="0"> -->
+      <div class="tab-pane fade" id="pills-bed1" role="tabpanel" aria-labelledby="pills-bed1-tab" tabindex="0">
         <span class="fs-3 fw-bold">BED 1</span>
 
         <form id="form-1">
@@ -280,83 +282,257 @@
 
       </div>
 
-      <div class="tab-pane fade" id="pills-treat-gap" role="tabpanel" aria-labelledby="pills-treat-gap-tab" tabindex="0">
+      <div class="tab-pane fade show active" id="pills-treat-gap" role="tabpanel" aria-labelledby="pills-treat-gap-tab" tabindex="0">
         <span class="fs-3 fw-bold">Treatment Gap Compensation</span>
 
-        <form action="" id="form-4">
-          <div class="row align-items-center mt-2">
-            <div class="col-6">
-              Prescribed number of fractions #
-            </div>
-            <div class="col-6">
-              <input type="number" class="form-control" placeholder="0" id="fractions" name="fractions">
-            </div>
-          </div>
-          <div class="row align-items-center mt-2">
-            <div class="col-6">
-              Prescribed dose per fractions in Gy
-            </div>
-            <div class="col-6">
-              <input type="number" class="form-control" placeholder="0" id="dose" name="dose">
-            </div>
-          </div>
-          <div class="row align-items-center mt-2">
-            <div class="col-6">
-              &alpha;/&beta;<sup class="text-danger fw-bold">*</sup>
-              <sup class="btn-info" data-bs-toggle="modal" data-bs-target="#miscModal">&#9432;</sup>
-            </div>
-            <div class="col-6">
-              <input type="number" class="form-control" placeholder="3" id="ab4" name="ab4" value="10">
-            </div>
-          </div>
-          <div class="row align-items-center mt-2">
-            <div class="col-6">
-              Total number of prescribed treatment calendar days
-            </div>
-            <div class="col-6">
-              <input type="number" class="form-control" placeholder="0" id="days" name="days">
-            </div>
-          </div>
-          <div class="row align-items-center mt-2">
-            <div class="col-6">
-              Number of fractions delivered <span class="fw-bold">before gap</span>
-            </div>
-            <div class="col-6">
-              <input type="number" class="form-control" placeholder="0" id="fractions-before-gap" name="fractions-before-gap">
-            </div>
-          </div>
-          <div class="row align-items-center mt-2">
-            <div class="col-6">
-              <span class="fw-bold">Total</span> number of treatment days due to gap
-            </div>
-            <div class="col-6">
-              <input type="number" class="form-control" placeholder="0" id="total-days" name="total-days">
-            </div>
-          </div>
-        </form>
+        <div class="row my-3">
+          <div class="col-lg-6">
+            <span class="fs-5">Original Presciption</span>
 
-        <p class="mt-2" style="font-size: 0.7rem;"><span class="text-danger fw-bold">*</span>Usually 3 for normal tissue and 10 for tumour</p>
-        <!-- <p style="font-size: 0.7rem;"><span class="text-danger fw-bold">notes</span> Please empty the input (n or d) if you want to calculate one of them!</p> -->
-        <!-- <div style="font-size: 0.7rem;">
-          <span class="text-danger fw-bold">unit description</span>
-          <ul>
-            <li>n = fractions</li>
-            <li>d = dose / fractions</li>
-            <li>K = Gy / day</li>
-            <li>T = days</li>
-            <li>T<sub>k</sub> = days</li>
-          </ul>
-        </div> -->
+            <form action="" id="form-4">
+              <div class="row mt-2">
+                <div class="col input-group">
+                  <span class="input-group-text">n</span>
+                  <input type="number" class="form-control" placeholder="0" id="n-4" name="n">
+                </div>
+                <div class="col input-group">
+                  <span class="input-group-text">K</span>
+                  <input type="number" class="form-control" placeholder="0" id="k-4" name="k" value="0">
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col input-group">
+                  <span class="input-group-text">d</span>
+                  <input type="number" class="form-control" placeholder="0" id="d-4" name="d">
+                </div>
+                <div class="col input-group">
+                  <span class="input-group-text">T</span>
+                  <input type="number" class="form-control" placeholder="0" id="t-4" name="t" value="0">
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col input-group">
+                  <span class="input-group-text">
+                    &alpha;/&beta; Tumour<sup class="text-danger fw-bold">*</sup>
+                    <sup class="btn-info" data-bs-toggle="modal" data-bs-target="#miscModal">&#9432;</sup>
+                  </span>
+                  <input type="number" class="form-control" placeholder="3" id="ab-tumor-4" name="ab" value="10">
+                </div>
 
-        <div class="my-2 d-flex justify-content-end">
-          <button class="btn btn-danger me-3" data-id="3">Reset</button>
-          <button class="btn btn-success" id="calc-3" data-id="3">Calculate</button>
+                <div class="col mt-lg-0 mt-2 input-group">
+                  <span class="input-group-text">
+                    &alpha;/&beta; Normal Tissue<sup class="text-danger fw-bold">*</sup>
+                    <sup class="btn-info" data-bs-toggle="modal" data-bs-target="#miscModal">&#9432;</sup>
+                  </span>
+                  <input type="number" class="form-control" placeholder="3" id="ab-normal-4" name="ab" value="3">
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col input-group">
+                  <span class="input-group-text">T<sub>k</sub></span>
+                  <input type="number" class="form-control" placeholder="0" id="tk-4" name="tk" value="0">
+                </div>
+                <div class="col input-group">
+                </div>
+              </div>
+            </form>
+
+            <div class="row">
+              <div class="col-lg-6">
+                <p class="mt-2" style="font-size: 0.7rem;"><span class="text-danger fw-bold">*</span>Usually 3 for normal tissue and 10 for tumour</p>
+                <!-- <p style="font-size: 0.7rem;"><span class="text-danger fw-bold">notes</span> Please empty the input (n or d) if you want to calculate one of them!</p> -->
+                <div style="font-size: 0.7rem;">
+                  <span class="text-danger fw-bold">unit description</span>
+                  <ul>
+                    <li>n = fractions</li>
+                    <li>d = dose / fractions</li>
+                    <li>K = Gy / day</li>
+                    <li>T = days</li>
+                    <li>T<sub>k</sub> = days</li>
+                  </ul>
+                </div>
+
+              </div>
+
+              <div class="col-lg-6">
+                <ul>
+                  <li>BED Tumour = <span id="bed-tumour" class="fw-bold"></span></li>
+                  <li>BED Normal Tissue = <span id="bed-normal" class="fw-bold"></span></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- <div class="my-2 d-flex justify-content-end">
+              <button class="btn btn-danger me-3" data-id="3">Reset</button>
+              <button class="btn btn-success" id="calc-3" data-id="3">Calculate</button>
+            </div> -->
+          </div>
+
+          <div class="col-lg-6">
+            <span class="fs-5">Post-Gap Planning 1</span>
+
+            <form action="" id="form-6">
+              <div class="row mt-2">
+                <div class="col input-group">
+                  <span class="input-group-text">n post</span>
+                  <input type="number" class="form-control" placeholder="0" id="n-6" name="n-post">
+                </div>
+                <div class="col input-group">
+                  <span class="input-group-text">d post</span>
+                  <input type="number" class="form-control" placeholder="0" id="d-6" name="d-post" value="0">
+                </div>
+              </div>
+
+              <div class="row mt-2">
+                <div class="col input-group">
+                  <span class="input-group-text">T total</span>
+                  <input type="number" class="form-control" placeholder="0" id="t-6" name="t-total">
+                </div>
+                <div class="col input-group">
+                </div>
+              </div>
+
+              <p class="fs-6 fw-bold mt-2">BED post</p>
+              <div class="row mt-2">
+                <div class="col input-group">
+                  <span class="input-group-text">Tumour</span>
+                  <input type="number" class="form-control" placeholder="0" id="bed-post-tumour-6" name="bed-post-tumour" disabled>
+                </div>
+                <div class="col input-group">
+                  <span class="input-group-text">Normal Tissue</span>
+                  <input type="number" class="form-control" placeholder="0" id="bed-post-normal-6" name="bed-post-normal" value="0" disabled>
+                </div>
+              </div>
+
+              <p class="fs-6 fw-bold mt-2">BED total</p>
+              <div class="row mt-2">
+                <div class="col input-group">
+                  <span class="input-group-text">Tumour</span>
+                  <input type="number" class="form-control" placeholder="0" id="bed-total-tumour-6" name="bed-total-tumour" disabled>
+                </div>
+                <div class="col input-group">
+                  <span class="input-group-text">Normal Tissue</span>
+                  <input type="number" class="form-control" placeholder="0" id="bed-total-normal-6" name="bed-total-normal" value="0" disabled>
+                </div>
+              </div>
+            </form>
+
+            <div class="mt-3 d-flex justify-content-end">
+              <button class="btn btn-danger me-3" data-id="3">Reset</button>
+              <button class="btn btn-success" id="calc-3" data-id="3">Calculate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row my-3">
+          <div class="col-lg-6">
+            <span class="fs-5">Received & Remaining BED</span>
+
+            <form action="" id="form-5">
+              <div class="row mt-2">
+                <div class="col input-group">
+                  <span class="input-group-text">n</span>
+                  <input type="number" class="form-control" placeholder="0" id="n-5" name="n">
+                </div>
+
+                <div class="col input-group">
+                  <span class="input-group-text">d</span>
+                  <input type="number" class="form-control" placeholder="0" id="d-5" name="d" disabled>
+                </div>
+              </div>
+
+              <div class="row mt-2">
+                <div class="col input-group">
+                  <span class="input-group-text">BED Received Tumour</span>
+                  <input type="number" class="form-control" placeholder="0" id="bed-rec-tumor-5" name="bed-rec-tumor" disabled>
+                </div>
+
+                <div class="col input-group mt-2 mt-lg-0">
+                  <span class="input-group-text">BED Remaining Tumour</span>
+                  <input type="number" class="form-control" placeholder="0" id="bed-rem-tumor-5" name="bed-rem-tumor" disabled>
+                </div>
+              </div>
+
+              <div class="row mt-2">
+                <div class="col input-group">
+                  <span class="input-group-text">BED Received Normal Tissue</span>
+                  <input type="number" class="form-control" placeholder="0" id="bed-rec-normal-5" name="bed-rec-normal" disabled>
+                </div>
+
+                <div class="col input-group mt-2 mt-lg-0">
+                  <span class="input-group-text">BED Remaining Normal Tissue</span>
+                  <input type="number" class="form-control" placeholder="0" id="bed-rem-normal-5" name="bed-rem-normal" disabled>
+                </div>
+              </div>
+            </form>
+
+            <!-- <div class="mb-2 mt-3 d-flex justify-content-end">
+              <button class="btn btn-danger me-3" data-id="3">Reset</button>
+              <button class="btn btn-success" id="calc-3" data-id="3">Calculate</button>
+            </div> -->
+          </div>
+
+          <div class="col-lg-6">
+            <span class="fs-5">Post-Gap Planning 2</span>
+
+            <form action="" id="form-6">
+              <div class="row mt-2">
+                <div class="col input-group">
+                  <span class="input-group-text">n post</span>
+                  <input type="number" class="form-control" placeholder="0" id="n-6" name="n-post">
+                </div>
+                <div class="col input-group">
+                  <span class="input-group-text">d post</span>
+                  <input type="number" class="form-control" placeholder="0" id="d-6" name="d-post" value="0">
+                </div>
+              </div>
+
+              <div class="row mt-2">
+                <div class="col input-group">
+                  <span class="input-group-text">T total</span>
+                  <input type="number" class="form-control" placeholder="0" id="t-6" name="t-total">
+                </div>
+                <div class="col input-group">
+                </div>
+              </div>
+
+              <p class="fs-6 fw-bold mt-2">BED post</p>
+              <div class="row mt-2">
+                <div class="col input-group">
+                  <span class="input-group-text">Tumour</span>
+                  <input type="number" class="form-control" placeholder="0" id="bed-post-tumour-6" name="bed-post-tumour" disabled>
+                </div>
+                <div class="col input-group">
+                  <span class="input-group-text">Normal Tissue</span>
+                  <input type="number" class="form-control" placeholder="0" id="bed-post-normal-6" name="bed-post-normal" value="0" disabled>
+                </div>
+              </div>
+
+              <p class="fs-6 fw-bold mt-2">BED total</p>
+              <div class="row mt-2">
+                <div class="col input-group">
+                  <span class="input-group-text">Tumour</span>
+                  <input type="number" class="form-control" placeholder="0" id="bed-total-tumour-6" name="bed-total-tumour" disabled>
+                </div>
+                <div class="col input-group">
+                  <span class="input-group-text">Normal Tissue</span>
+                  <input type="number" class="form-control" placeholder="0" id="bed-total-normal-6" name="bed-total-normal" value="0" disabled>
+                </div>
+              </div>
+            </form>
+
+            <div class="mt-3 d-flex justify-content-end">
+              <button class="btn btn-danger me-3" data-id="3">Reset</button>
+              <button class="btn btn-success" id="calc-3" data-id="3">Calculate</button>
+            </div>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <div class="container">
     <footer class="py-3 my-4">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
